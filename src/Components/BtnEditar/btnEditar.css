@@ -1,0 +1,49 @@
+.btnEditar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #fff;
+  width: 100vw;
+  box-sizing: border-box;
+  gap: 10px;
+}
+.btnEditar-container div{
+  display: flex;
+  gap: 20px;
+}
+.btnEditar{
+  width: 160px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #FFA114;
+  font-weight: bold;
+  font-size: 24px;
+}
+.btnDeletar {
+  width: 160px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #FF1E1E;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.btnImprimir {
+  border-radius: 10px;
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 66rem) {
+  .btnEditar-container button {
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+  }
+  .btnEditar-container div{
+    gap: 10px;
+  }
+}

@@ -1,0 +1,29 @@
+.btnSalvarAlteracoes-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  width: 100vw;
+  box-sizing: border-box;
+}
+.btnSalvarAlteracoes-container button {
+  width: 350px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #FFA114;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+@media (max-width: 66rem) {
+  span {
+    display: none;
+  }
+  .btnSalvarAlteracoes-container button {
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+    font-size: 16px;
+  }
+}

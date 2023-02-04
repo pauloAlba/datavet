@@ -1,0 +1,31 @@
+.pesquisar-container form{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  width: 100vw;
+  box-sizing: border-box;
+}
+.pesquisar-container form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.pesquisar-container form button{
+  background-color: #1EBBFF;
+  width: 254px;
+  height: 53px;
+  border-radius: 10px;
+  color: #fff;
+  border: none;
+  font-size: 26px;
+}
+.pesquisar-container form input{
+  width: 750px;
+  height: 50px;
+  border: none;
+  background-color: #E4FAFF;
+}
