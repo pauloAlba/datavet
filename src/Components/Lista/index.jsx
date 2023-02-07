@@ -6,9 +6,11 @@ import axios from "axios";
 export default function Lista() {
   const [nome, setNome] = useState([]);  
 
+  const url = "http://datavetbackend.onrender.com"
+
   useEffect(() => {
     async function getUsers() {
-      await axios.get("http://datavetbackend.onrender.com/clientes") //https://fdffffffff.onrender.com/Produtos
+      await axios.get(url + "/clientes") //https://fdffffffff.onrender.com/Produtos
         .then(response => {
           setNome(response.data);
         })
