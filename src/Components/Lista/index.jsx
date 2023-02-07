@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 export default function Lista() {
-  const [nome, setNome] = useState([]);
+  const [nome, setNome] = useState([]);  
 
   useEffect(() => {
     async function getUsers() {
-      await axios.get("http://localhost:3000/clientes") //https://fdffffffff.onrender.com/Produtos
+      await axios.get("http://datavetbackend.onrender.com/clientes") //https://fdffffffff.onrender.com/Produtos
         .then(response => {
           setNome(response.data);
         })

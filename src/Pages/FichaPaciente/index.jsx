@@ -9,7 +9,7 @@ import BtnEditar from "../../Components/BtnEditar";
 
 export default function FichaPaciente() {
   const { id } = useParams();
-  const url = "http://localhost:3000";
+  const url = "https://datavetbackend.onrender.com";
 
   const [user, setUser] = useState([]);
 
