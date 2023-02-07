@@ -23,15 +23,15 @@ export default function Lista() {
       {nome.map((user) => {
         return (
           <ul>
-            <Link to={`/ficha/${user.id}`}>Abrir</Link>
+            <Link className="btnAbrir" to={`/ficha/${user.id}`}>Abrir</Link>
             <li key={user.id}>
               <strong>{user.id}</strong>
               <strong>{user.nomePaciente}</strong>
-              <strong>{user.raca}</strong>
-              <strong>{user.especie}</strong>
-              <strong>{user.castrado}</strong>
-              <strong>{user.clinicoResponsavel}</strong>
-              <strong>{user.nascimento}</strong>
+              <strong className="visible">{user.raca}</strong>
+              <strong className="visible">{user.especie}</strong>
+              <strong className="visible">{user.castrado}</strong>
+              <strong className="visible">{user.clinicoResponsavel}</strong>
+              <strong className="visible">{user.nascimento}</strong>
             </li>
           </ul>
         );

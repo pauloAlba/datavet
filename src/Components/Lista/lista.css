@@ -22,10 +22,25 @@
 }
 .lista-container li{
   display: flex;
-  gap: 20px;
+  align-items: center;
+  gap: 100%;
   list-style: none;
   width: 150px;
 }
+.btnAbrir {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 54px;
+  height: 26px;
+  color: white;
+  border-radius: 5px;
+  background-color: #1EBBFF;
+  font-weight: bold;
+  font-size: 16px;
+}
+
 @media (max-width: 60rem) {
   .visible{
     display: none;

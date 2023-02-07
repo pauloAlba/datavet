@@ -5,9 +5,30 @@
   align-items: center;
   height: 100vh;
 }
-.formularioCadastro-container .box{
+
+.formularioCadastro-container input{
+  padding: 0px 10px;
+  border-radius: 5px;
+}
+
+.formularioCadastro-container .flex-wrapper{
+  height: 450px;
+}
+.box1{
   display: flex;
+  width: 100%;
+}
+.box2{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: space-between;
-  width: 90%;
+  width: 100vw;
+}
+.box2 input{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 150px;
 }
