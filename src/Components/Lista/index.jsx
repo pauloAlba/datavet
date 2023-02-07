@@ -6,7 +6,7 @@ import axios from "axios";
 export default function Lista() {
   const [nome, setNome] = useState([]);  
 
-  const url = "http://datavetbackend.onrender.com"
+  const url = "https://datavetbackend.onrender.com"
 
   useEffect(() => {
     async function getUsers() {
