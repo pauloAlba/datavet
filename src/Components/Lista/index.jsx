@@ -10,11 +10,11 @@ export default function Lista() {
 
   useEffect(() => {
     async function getUsers() {
-      await axios.get(url + "/clientes") //https://fdffffffff.onrender.com/Produtos
-        .then(response => {
-          setNome(response.data);
-        })
-        .catch((error) => console.log(error));
+        await fetch(url + `/clientes`) ///Produto?id=${id}
+        .then((res) => res.json())
+        .then((res) => {
+          setNome(res);
+        });
     }
     getUsers();
   }, []);
