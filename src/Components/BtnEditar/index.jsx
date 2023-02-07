@@ -7,7 +7,7 @@ export default function BtnEditar() {
     
     <div className="btnEditar-container">
 
-      <img className="btnImprimir" width={70} src="/src/Images/printer.png" alt="" />
+      <img className="btnImprimir" width={70} src="/public/printer.png" alt="" />
          
       <div>
         <Link to="/editar">
