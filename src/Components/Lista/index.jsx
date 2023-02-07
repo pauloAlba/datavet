@@ -1,27 +1,41 @@
 import "./lista.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 export default function Lista() {
-  const [nome, setNome] = useState("");
+  const [nome, setNome] = useState([]);
 
   useEffect(() => {
-    function addNome() {
-      setNome("olá");
+    async function getUsers() {
+      await axios.get("http://localhost:3000/clientes") //https://fdffffffff.onrender.com/Produtos
+        .then(response => {
+          setNome(response.data);
+        })
+        .catch((error) => console.log(error));
     }
-    addNome();
+    getUsers();
   }, []);
 
   return (
     <div className="lista-container">
-      <ul>
-        <Link to="/ficha"><button>Abrir</button></Link>
-        <li>{nome}</li>
-        <li className="visible">{nome}</li>
-        <li className="visible">{nome}</li>
-        <li className="visible">{nome}</li>
-        <li className="visible">{nome}</li>
-      </ul>
+      <br /><br />
+      {nome.map((user) => {
+        return (
+          <ul>
+            <Link to={`/ficha/${user.id}`}>Abrir</Link>
+            <li key={user.id}>
+              <strong>{user.id}</strong>
+              <strong>{user.nomePaciente}</strong>
+              <strong>{user.raca}</strong>
+              <strong>{user.especie}</strong>
+              <strong>{user.castrado}</strong>
+              <strong>{user.clinicoResponsavel}</strong>
+              <strong>{user.nascimento}</strong>
+            </li>
+          </ul>
+        );
+      })}
     </div>
   );
 }

@@ -1,8 +1,13 @@
-.ficha-container{
+.formularioCadastro-container{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   height: 100vh;
-  box-sizing: border-box;
+}
+.formularioCadastro-container .box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
 }

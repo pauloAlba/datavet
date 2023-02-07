@@ -4,6 +4,7 @@
   align-items: center;
   flex-direction: column;
   gap: 5px;
+  overflow-y: scroll;
   
 }
 
@@ -19,7 +20,9 @@
   box-sizing: border-box;
   border-radius: 5px;
 }
-li{
+.lista-container li{
+  display: flex;
+  gap: 20px;
   list-style: none;
   width: 150px;
 }
