@@ -14,8 +14,8 @@ export default function BtnCadastrar() {
   return (
     <div className="btnCadastrar-container">
       <ul>
-        <span>Cadastrar novo</span>
         <Link to="/cadastrar"><button onClick={abrirCadastro}>+</button></Link>
+        <span>Cadastrar novo</span>
       </ul>
     </div>
   );

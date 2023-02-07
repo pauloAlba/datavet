@@ -1,0 +1,7 @@
+.headerTitle-container{
+  display: flex;
+  justify-content: center;
+  gap: 190px;
+  margin: 0;
+  background-color: white;
+}

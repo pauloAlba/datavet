@@ -4,6 +4,9 @@ import Header from "../../Components/Header";
 import Pesquisar from "../../Components/Pesquisar";
 import Lista from "../../Components/Lista";
 import BtnCadastrar from "../../Components/BtnCadastrar";
+import HeaderTitle from "../../Components/HeaderTitle"
+
+
 import axios from "axios";
 
 export default function Home() {
@@ -13,7 +16,7 @@ export default function Home() {
       <Header titulo="PACIENTES CADASTRADOS" />
       <Lista />
       <Pesquisar />
-      <BtnCadastrar />
+      <BtnCadastrar/>
     </div>
   );
 }

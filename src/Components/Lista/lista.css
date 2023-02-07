@@ -13,42 +13,57 @@
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  gap: 60px;
+  justify-content: center;
+  gap: 40px;
   background-color: #fff;
   padding: 10px;
-  width: 90vw;
+  width: 95vw;
   box-sizing: border-box;
   border-radius: 5px;
+
 }
 .lista-container li{
   display: flex;
   align-items: center;
-  gap: 100%;
+  justify-content: center;
   list-style: none;
-  width: 150px;
+  padding: 0px 2px;
+}
+.lista-container input{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  border: none;
 }
 .btnAbrir {
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  width: 54px;
+  width: 64px;
   height: 26px;
   color: white;
   border-radius: 5px;
   background-color: #1EBBFF;
   font-weight: bold;
   font-size: 16px;
+  padding: 4px 10px;
+  margin-left: 40px;
 }
 
+
 @media (max-width: 60rem) {
-  .visible{
+
+  .lista-container input.visible{
     display: none;
   }
 }
 button{
   background-color: #1EBBFF;
-  width: 54px;
+  width: 64px;
   height: 26px;
   border: none;
   color: #fff;
