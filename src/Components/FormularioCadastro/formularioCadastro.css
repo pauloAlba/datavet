@@ -36,3 +36,34 @@
     width: 90vw;
   }
 }
+
+
+.btnSalvar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  width: 100vw;
+  box-sizing: border-box;
+}
+.btnSalvar-container button {
+  width: 150px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #1eff42;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+@media (max-width: 66rem) {
+  span {
+    display: none;
+  }
+  .btnSalvar-container button {
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+    font-size: 16px;
+  }
+}
