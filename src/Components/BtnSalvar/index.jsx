@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function BtnSalvar({id, url, nomeTutor, cpf, telefone, endereco, indicacao, nomePaciente, especie
 , raca, nascimento, castrado, clinicoResponsavel, telefoneClinico}) {
 
-  function handleSalvar(){
+  function handleSalvar(e){
       e.preventDefault();
   
       alert("Cliente cadastrado!")
@@ -32,8 +32,8 @@ export default function BtnSalvar({id, url, nomeTutor, cpf, telefone, endereco, 
   return (
     
     <div className="btnSalvar-container">
-        <Link to="/">
-        <button onClick={handleSalvar} className="BtnSalvar">Salvar</button>
+        <Link onClick={handleSalvar} to="/">
+        Salvar
         </Link>
     </div>
   );

@@ -11,7 +11,7 @@ export default function RoutesApp(){
     <Routes>
       <Route path="/" element={ <Home/> } />
       <Route path="/cadastrar" element={ <CadastrarPaciente/> } />
-      <Route path="/editar" element={ <EditarPaciente/> } />
+      <Route path="/editar/:id" element={ <EditarPaciente/> } />
       <Route path="/ficha/:id" element={ <FichaPaciente/> }/>
     </Routes>
   )

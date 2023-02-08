@@ -1,0 +1,42 @@
+.formularioCadastro-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.formularioCadastro-container input{
+  padding: 0px 10px;
+  border-radius: 5px;
+}
+
+.formularioCadastro-container .flex-wrapper{
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+}
+.box2{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  flex-wrap: wrap;
+  margin: 0px 40px;
+}
+.box2 input{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+}
+

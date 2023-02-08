@@ -6,12 +6,16 @@ import axios from "axios";
 import Header from "../../Components/Header";
 import BtnFechar from "../../Components/BtnFechar";
 import BtnEditar from "../../Components/BtnEditar";
+import BtnDeletar from "../../Components/BtnDeletar";
+
 
 export default function FichaPaciente() {
   const { id } = useParams();
   const url = "https://datavetbackend.onrender.com";
 
   const [user, setUser] = useState([]);
+
+ 
 
   useEffect(() => {
     async function teste() {
@@ -64,7 +68,6 @@ export default function FichaPaciente() {
               <label htmlFor="">Espécie:</label>
               <input disabled="false" type="text" value={user.especie} />
             </div>
-            
           </div>
 
           <div className="box1">
@@ -76,9 +79,7 @@ export default function FichaPaciente() {
               <label htmlFor="">Castrado:</label>
               <input disabled="false" type="text" value={user.castrado} />
             </div>
-            
           </div>
-
 
           <div className="box2"></div>
 
@@ -90,8 +91,9 @@ export default function FichaPaciente() {
         </div>
       </form>
 
-     
-      <BtnEditar id={id} url={url} />
+      <BtnEditar user={id} url={url}/>
+      <BtnDeletar/>
+      
     </div>
   );
 }

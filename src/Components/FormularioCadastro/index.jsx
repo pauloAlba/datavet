@@ -1,6 +1,6 @@
 import "./formularioCadastro.css";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHref } from "react-router-dom";
 import BtnSalvar from "../../Components/BtnSalvar"
 
 export default function FormularioCadastro({ status }) {
@@ -21,29 +21,7 @@ export default function FormularioCadastro({ status }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-
-    alert("Cliente cadastrado!")
-
-    fetch(url + `/cliente`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        nomeTutor: nomeTutor,
-        cpf: cpf,
-        telefone: telefone,
-        endereco: endereco,
-        indicacao: indicacao,
-        nomePaciente: nomePaciente,
-        especie: especie,
-        raca: raca,
-        dataNascimento: nascimento,
-        castrado: castrado,
-        clinicoResponsavel: indicacao,
-        telefoneClinico: telefoneClinico,
-      }),
-    });
-
-
+    
     setNomeTutor("");
     setCPF("");
     setCastrado("");
@@ -171,9 +149,6 @@ export default function FormularioCadastro({ status }) {
        castrado={castrado} 
        clinicoResponsavel={indicacao}
       telefoneClinico={telefoneClinico}/>
-      <div className="btnSalvar-container">
-        <button onClick={handleSubmit}>Salvar</button>
-      </div>
     </div>
   );
 }
