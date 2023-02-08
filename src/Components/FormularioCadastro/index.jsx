@@ -1,6 +1,7 @@
 import "./formularioCadastro.css";
 import { useState, useEffect } from "react";
-import { Link, Navigate, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
+import BtnSalvar from "../../Components/BtnSalvar"
 
 export default function FormularioCadastro({ status }) {
   const url = "https://datavetbackend.onrender.com";
@@ -20,6 +21,8 @@ export default function FormularioCadastro({ status }) {
 
   function handleSubmit(e) {
     e.preventDefault();
+
+    alert("Cliente cadastrado!")
 
     fetch(url + `/cliente`, {
       method: "POST",
@@ -53,11 +56,9 @@ export default function FormularioCadastro({ status }) {
     setRaca("");
     setTelefone("");
     setTelefoneClinico("");
-
-    <Route path="/"/>
-
-
   }
+
+
 
   return (
     <div className="formularioCadastro-container">
@@ -156,6 +157,20 @@ export default function FormularioCadastro({ status }) {
         </div>
       </form>
 
+      <BtnSalvar  onClick={handleSubmit}
+       url={url}
+       nomeTutor={nomeTutor}
+       cpf={cpf}
+       telefone={telefone}
+       endereco={endereco}
+       indicacao={indicacao}
+       nomePaciente={nomePaciente}
+       especie={especie}
+       raca={raca}
+       dataNascimento={nascimento}
+       castrado={castrado} 
+       clinicoResponsavel={indicacao}
+      telefoneClinico={telefoneClinico}/>
       <div className="btnSalvar-container">
         <button onClick={handleSubmit}>Salvar</button>
       </div>

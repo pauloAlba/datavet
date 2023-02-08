@@ -90,7 +90,8 @@ export default function FichaPaciente() {
         </div>
       </form>
 
-      <BtnEditar />
+     
+      <BtnEditar id={id} url={url} />
     </div>
   );
 }
