@@ -1,7 +1,6 @@
 import "./btnEditar.css";
 import { Link } from "react-router-dom";
 
-
 export default function BtnSalvar({id, url, nomeTutor, cpf, telefone, endereco, indicacao, nomePaciente, especie
 , raca, nascimento, castrado, clinicoResponsavel, telefoneClinico}) {
 
