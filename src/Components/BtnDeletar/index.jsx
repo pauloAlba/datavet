@@ -10,7 +10,7 @@ export default function BtnDeletar({ id, url }) {
     });
   }
   return (
-    <div className="btnDeletar-container">
+    <div>
       <Link to="/">
         <button onClick={handleDelete} className="btnDeletar">
           Deletar

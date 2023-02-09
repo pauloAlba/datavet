@@ -12,4 +12,11 @@
   font-weight: bold;
   font-size: 18px;
 }
+@media (max-width: 60rem) {
+  .btnFechar-container {
+    position: absolute;
+    right: 5%;
+    top:2%;
+  }
+}
 

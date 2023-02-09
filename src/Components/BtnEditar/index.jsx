@@ -15,14 +15,9 @@ export default function BtnEdit({id, url}) {
     
     <div className="btnEditar-container">
 
-      <img className="btnImprimir" width={70} src="/public/printer.png" alt="" />
-         
-      <div>
         <Link to={`/editar/${id}`}>
         <button className="btnEditar">Editar</button>
         </Link>
-      
-      </div>
     </div>
   );
 }

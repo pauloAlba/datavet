@@ -1,7 +1,7 @@
 import "./fichaPaciente.css";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import axios from "axios";
+import { useParams, Link } from "react-router-dom";
+
 
 import Header from "../../Components/Header";
 import BtnFechar from "../../Components/BtnFechar";
@@ -12,10 +12,9 @@ import BtnDeletar from "../../Components/BtnDeletar";
 export default function FichaPaciente() {
   const { id } = useParams();
   const url = "https://datavetbackend.onrender.com";
+  
 
   const [user, setUser] = useState([]);
-
- 
 
   useEffect(() => {
     async function teste() {
@@ -91,9 +90,10 @@ export default function FichaPaciente() {
         </div>
       </form>
 
-      <BtnEditar user={id} url={url}/>
-      <BtnDeletar/>
-      
+      <div className="buttons">
+        <BtnDeletar id={id} url={url} />
+        <Link className="btnAbrir" to={`/editar/${id}`}>Editar</Link>
+      </div>
     </div>
   );
 }
