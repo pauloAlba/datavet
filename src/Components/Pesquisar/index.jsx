@@ -9,7 +9,6 @@ export default function Pesquisar() {
     <div className="pesquisar-container">
       <form onSubmit={(e) => buscar(e)}>
         <input type="text" />
-        <button type="submi">Pesquisar</button>
       </form>
     </div>
   );

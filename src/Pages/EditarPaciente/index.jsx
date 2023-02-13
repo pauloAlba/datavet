@@ -1,7 +1,7 @@
 import "./fichaPaciente.css";
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import axios from "axios";
+import { IMaskInput } from "react-imask";
 
 import Header from "../../Components/Header";
 import BtnFechar from "../../Components/BtnFechar";
@@ -42,7 +42,7 @@ export default function EditarPaciente() {
           setIndicacao(res.indicacao);
           setNomePaciente(res.nomePaciente);
           setRaca(res.raca);
-          setEspecie(res.especie);
+          setEspecie(res.expecie);
           setCastrado(res.castrado);
           setNascimento(res.dataNascimento);
           setClinico(res.clinicoResponsavel);
@@ -72,17 +72,18 @@ export default function EditarPaciente() {
           />
 
           <label htmlFor="">CPF:</label>
-          <input
-            disabled={disabled}
-            type="text"
+          <IMaskInput
+            mask="000.000.000-00"
+            placeholder="Digite o CPF"
             value={cpf}
             onChange={(e) => setCpf(e.target.value)}
           />
 
           <label htmlFor="">Telefone:</label>
-          <input
+          <IMaskInput
             disabled={disabled}
-            type="text"
+            mask="(00) 90000-0000"
+            placeholder="(00) 00000-0000"
             value={telefone}
             onChange={(e) => setTelefone(e.target.value)}
           />
@@ -140,12 +141,14 @@ export default function EditarPaciente() {
           <div className="box1">
             <div className="box2">
               <label htmlFor="">Nascimento:</label>
-              <input
+              <IMaskInput
                 disabled={disabled}
-                type="text"
+                mask="00/00/0000"
+                placeholder="dd/mm/aaaa"
                 value={nascimento}
                 onChange={(e) => setNascimento(e.target.value)}
               />
+    
             </div>
 
             <div className="box2">
@@ -170,32 +173,34 @@ export default function EditarPaciente() {
           />
 
           <label htmlFor="">Telefone:</label>
-          <input
+          <IMaskInput
             disabled={disabled}
-            type="text"
+            mask="(00) 90000-0000"
+            placeholder="(00) 00000-0000"
             value={telefoneClinico}
             onChange={(e) => setTelefoneClinico(e.target.value)}
           />
+          
         </div>
       </form>
 
       <Link to="/">
-      <BtnSalvarAlteracoes
-        url={url}
-        id={id}
-        nomeTutor={nomeTutor}
-        cpf={cpf}
-        telefone={telefone}
-        endereco={endereco}
-        indicacao={indicacao}
-        nomePaciente={nomePaciente}
-        especie={especie}
-        raca={raca}
-        dataNascimento={nascimento}
-        castrado={castrado}
-        clinicoResponsavel={clinico}
-        telefoneClinico={telefoneClinico}
-      />
+        <BtnSalvarAlteracoes
+          url={url}
+          id={id}
+          nomeTutor={nomeTutor}
+          cpf={cpf}
+          telefone={telefone}
+          endereco={endereco}
+          indicacao={indicacao}
+          nomePaciente={nomePaciente}
+          especie={especie}
+          raca={raca}
+          dataNascimento={nascimento}
+          castrado={castrado}
+          clinicoResponsavel={clinico}
+          telefoneClinico={telefoneClinico}
+        />
       </Link>
     </div>
   );

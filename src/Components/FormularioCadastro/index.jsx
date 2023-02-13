@@ -1,6 +1,7 @@
 import "./formularioCadastro.css";
 import { useState, useEffect } from "react";
-import BtnSalvar from "../../Components/BtnSalvar"
+import BtnSalvar from "../../Components/BtnSalvar";
+import { IMaskInput } from "react-imask";
 
 export default function FormularioCadastro({ status }) {
   const url = "https://datavetbackend.onrender.com";
@@ -20,7 +21,7 @@ export default function FormularioCadastro({ status }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    
+
     setNomeTutor("");
     setCPF("");
     setCastrado("");
@@ -34,8 +35,6 @@ export default function FormularioCadastro({ status }) {
     setTelefone("");
     setTelefoneClinico("");
   }
-
-
 
   return (
     <div className="formularioCadastro-container">
@@ -51,19 +50,19 @@ export default function FormularioCadastro({ status }) {
           />
 
           <label htmlFor="">CPF:</label>
-          <input
-            type="text"
+          <IMaskInput
+            mask="000.000.000-00"
+            placeholder="Digite o CPF"
             value={cpf}
-            onChange={(e) => {
-              setCPF(e.target.value);
-            }}
+            onChange={(e) => setCpf(e.target.value)}
           />
-
+      
           <label htmlFor="">Telefone:</label>
-          <input
+          <IMaskInput
+            mask="(00) 90000-0000"
+            placeholder="(00) 00000-0000"
             value={telefone}
             onChange={(e) => setTelefone(e.target.value)}
-            type="text"
           />
 
           <label htmlFor="">Endereço:</label>
@@ -105,10 +104,11 @@ export default function FormularioCadastro({ status }) {
           />
 
           <label htmlFor="">Nascimento:</label>
-          <input
+          <IMaskInput
+            mask="00/00/0000"
+            placeholder="dd/mm/aaaa"
             value={nascimento}
             onChange={(e) => setNascimento(e.target.value)}
-            type="text"
           />
 
           <label htmlFor="">Castrado:</label>
@@ -126,28 +126,32 @@ export default function FormularioCadastro({ status }) {
           />
 
           <label htmlFor="">Telefone:</label>
-          <input
+
+          <IMaskInput
+            mask="(00) 90000-0000"
+            placeholder="(00) 00000-0000"
             value={telefoneClinico}
             onChange={(e) => setTelefoneClinico(e.target.value)}
-            type="text"
           />
         </div>
       </form>
 
-      <BtnSalvar  onClick={handleSubmit}
-       url={url}
-       nomeTutor={nomeTutor}
-       cpf={cpf}
-       telefone={telefone}
-       endereco={endereco}
-       indicacao={indicacao}
-       nomePaciente={nomePaciente}
-       especie={especie}
-       raca={raca}
-       dataNascimento={nascimento}
-       castrado={castrado} 
-       clinicoResponsavel={indicacao}
-      telefoneClinico={telefoneClinico}/>
+      <BtnSalvar 
+        onClick={handleSubmit}
+        url={url}
+        nomeTutor={nomeTutor}
+        cpf={cpf}
+        telefone={telefone}
+        endereco={endereco}
+        indicacao={indicacao}
+        nomePaciente={nomePaciente}
+        especie={especie}
+        raca={raca}
+        dataNascimento={nascimento}
+        castrado={castrado}
+        clinicoResponsavel={indicacao}
+        telefoneClinico={telefoneClinico}
+      />
     </div>
   );
 }

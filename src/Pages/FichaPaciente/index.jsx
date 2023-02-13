@@ -1,6 +1,7 @@
 import "./fichaPaciente.css";
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import { IMaskInput } from "react-imask";
 
 
 import Header from "../../Components/Header";
@@ -39,10 +40,20 @@ export default function FichaPaciente() {
           <input disabled="false" type="text" value={user.nomeTutor} />
 
           <label htmlFor="">CPF:</label>
-          <input disabled="false" type="text" value={user.cpf} />
+          <IMaskInput 
+          disabled="false"
+          mask="000.000.000-00"
+          value={user.cpf}
+          />
 
           <label htmlFor="">Telefone:</label>
-          <input disabled="false" type="text" value={user.telefone} />
+          <IMaskInput 
+          disabled="false"
+          mask="(00) 90000-0000"
+          value={user.telefone}
+          placeholder="(00) 00000-0000"
+          />
+          
 
           <label htmlFor="">Endereço:</label>
           <input disabled="false" type="text" value={user.endereco} />
@@ -65,14 +76,19 @@ export default function FichaPaciente() {
 
             <div className="box2">
               <label htmlFor="">Espécie:</label>
-              <input disabled="false" type="text" value={user.especie} />
+              <input disabled="false" type="text" value={user.expecie} />
             </div>
           </div>
 
           <div className="box1">
             <div className="box2">
               <label htmlFor="">Nascimento:</label>
-              <input disabled="false" type="text" value={user.nascimento} />
+              <IMaskInput
+                disabled="false"
+                mask="00/00/0000"
+                value={user.dataNascimento}
+                onChange={(e) => setNascimento(e.target.value)}
+              />
             </div>
             <div className="box2">
               <label htmlFor="">Castrado:</label>
