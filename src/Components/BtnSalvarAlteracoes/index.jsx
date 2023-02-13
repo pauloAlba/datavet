@@ -7,7 +7,7 @@ export default function BtnSalvarAlteracoes({id, url, nomeTutor, cpf, telefone, 
   async function edit(e) {
     e.preventDefault();
 
-      alert("Cliente Editado!")
+      alert("Dados atualizados!")
 
       await fetch(url + `/cliente`, {
       method: "PUT",

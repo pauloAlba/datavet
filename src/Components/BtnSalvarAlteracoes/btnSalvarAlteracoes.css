@@ -13,7 +13,6 @@
   justify-content: center;
   width: 350px;
   height: 60px;
-  
   border-radius: 10px;
   color: white;
   background-color: #FFA114;
@@ -27,7 +26,7 @@
     display: none;
   }
   .btnSalvarAlteracoes {
-    width: 100px;
+    width: 200px;
     height: 40px;
     border-radius: 30px;
     font-size: 16px;
