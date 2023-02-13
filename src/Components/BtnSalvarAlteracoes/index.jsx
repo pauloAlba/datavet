@@ -1,11 +1,38 @@
 import "./btnSalvarAlteracoes.css";
 import { Link } from "react-router-dom";
 
-export default function BtnSalvarAlteracoes() {
+export default function BtnSalvarAlteracoes({id, url, nomeTutor, cpf, telefone, endereco, indicacao, nomePaciente, especie
+  , raca, nascimento, castrado, clinicoResponsavel, telefoneClinico}) {
+
+  async function edit(e) {
+    e.preventDefault();
+
+      alert("Cliente Editado!")
+
+      await fetch(url + `/cliente`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        id: id,
+        nomeTutor: nomeTutor,
+        cpf: cpf,
+        telefone: telefone,
+        endereco: endereco,
+        indicacao: indicacao,
+        nomePaciente: nomePaciente,
+        raca: raca,
+        expecie: especie,
+        castrado: castrado,
+        dataNascimento: nascimento,
+        clinicoResponsavel: clinicoResponsavel,
+        telefoneClinco: telefoneClinico,
+      }),
+    });
+  }
   return (
     <div className="btnSalvarAlteracoes-container">
-      <Link to="/ficha">
-      <button>Salvar alterações</button>
+      <Link className="btnSalvarAlteracoes" onClick={edit} to="/">
+      Salvar alterações
       </Link>
     </div>
   );

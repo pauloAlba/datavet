@@ -1,6 +1,6 @@
 import "./fichaPaciente.css";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 
 import Header from "../../Components/Header";
@@ -27,28 +27,6 @@ export default function EditarPaciente() {
   const [castrado, setCastrado] = useState("");
   const [clinico, setClinico] = useState("");
   const [telefoneClinico, setTelefoneClinico] = useState("");
-
-  async function edit() {
-    await fetch(url + `/cliente`, {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        id: id,
-        nomeTutor: nomeTutor,
-        cpf: cpf,
-        telefone: telefone,
-        endereco: endereco,
-        indicacao: indicacao,
-        nomePaciente: nomePaciente,
-        raca: raca,
-        expecie: especie,
-        castrado: castrado,
-        dataNascimento: nascimento,
-        clinicoResponsavel: clinico,
-        telefoneClinco: telefoneClinico,
-      }),
-    });
-  }
 
   useEffect(() => {
     async function teste2() {
@@ -126,8 +104,6 @@ export default function EditarPaciente() {
           />
         </div>
         <div className="flex-wrapper">
-
-
           <h2>Dados do paciente</h2>
           <br />
 
@@ -202,8 +178,25 @@ export default function EditarPaciente() {
           />
         </div>
       </form>
-      <BtnSalvarAlteracoes />
-      <button onClick={edit}>Editar</button>
+
+      <Link to="/">
+      <BtnSalvarAlteracoes
+        url={url}
+        id={id}
+        nomeTutor={nomeTutor}
+        cpf={cpf}
+        telefone={telefone}
+        endereco={endereco}
+        indicacao={indicacao}
+        nomePaciente={nomePaciente}
+        especie={especie}
+        raca={raca}
+        dataNascimento={nascimento}
+        castrado={castrado}
+        clinicoResponsavel={clinico}
+        telefoneClinico={telefoneClinico}
+      />
+      </Link>
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import "./formularioCadastro.css";
 import { useState, useEffect } from "react";
-import { Link, useHref } from "react-router-dom";
 import BtnSalvar from "../../Components/BtnSalvar"
 
 export default function FormularioCadastro({ status }) {

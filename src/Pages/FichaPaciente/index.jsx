@@ -92,7 +92,9 @@ export default function FichaPaciente() {
 
       <div className="buttons">
         <BtnDeletar id={id} url={url} />
-        <Link className="btnAbrir" to={`/editar/${id}`}>Editar</Link>
+        <Link className="btnEditar" to={`/editar/${id}`}>
+          Editar
+        </Link>
       </div>
     </div>
   );

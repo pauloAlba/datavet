@@ -1,4 +1,4 @@
-import "./btnEditar.css";
+import "./btnSalvar.css";
 import { Link } from "react-router-dom";
 
 export default function BtnSalvar({id, url, nomeTutor, cpf, telefone, endereco, indicacao, nomePaciente, especie
@@ -31,7 +31,7 @@ export default function BtnSalvar({id, url, nomeTutor, cpf, telefone, endereco, 
   return (
     
     <div className="btnSalvar-container">
-        <Link onClick={handleSalvar} to="/">
+        <Link className="btnSalvar" onClick={handleSalvar} to="/">
         Salvar
         </Link>
     </div>
