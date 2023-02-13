@@ -42,11 +42,11 @@ export default function EditarPaciente() {
           setIndicacao(res.indicacao);
           setNomePaciente(res.nomePaciente);
           setRaca(res.raca);
-          setEspecie(res.expecie);
+          setEspecie(res.especie);
           setCastrado(res.castrado);
           setNascimento(res.dataNascimento);
           setClinico(res.clinicoResponsavel);
-          telefoneClinico(res.telefoneClinco);
+          telefoneClinico(res.telefoneClinico);
         })
         .catch((error) => {
           console.log(error);

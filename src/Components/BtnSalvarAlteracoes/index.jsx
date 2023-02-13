@@ -21,11 +21,11 @@ export default function BtnSalvarAlteracoes({id, url, nomeTutor, cpf, telefone, 
         indicacao: indicacao,
         nomePaciente: nomePaciente,
         raca: raca,
-        expecie: especie,
+        especie: especie,
         castrado: castrado,
         dataNascimento: nascimento,
         clinicoResponsavel: clinicoResponsavel,
-        telefoneClinco: telefoneClinico,
+        telefoneClinico: telefoneClinico,
       }),
     });
   }
