@@ -32,7 +32,6 @@ export default function Lista() {
               <input className="visible" type="text" width={"40px"} value={user.especie}/>
               <input className="visible" type="text" width={"10px"} value={user.castrado}/>
               <input className="visible" type="text" width={"10px"} value={user.clinicoResponsavel}/>
-              <input className="visible" type="text" width={"40px"} value={user.dataNascimento}/>
             <Link className="btnAbrir" to={`/ficha/${user.id}`}>Abrir</Link>
             </li>
           </ul>

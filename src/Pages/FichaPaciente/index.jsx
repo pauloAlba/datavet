@@ -102,7 +102,7 @@ export default function FichaPaciente() {
           <input disabled="false" type="text" value={user.clinicoResponsavel} />
 
           <label htmlFor="">Telefone:</label>
-          <input disabled="false" type="text" value={user.telefoneClinco} />
+          <input disabled="false" type="text" value={user.telefoneClinico} />
         </div>
       </form>
 
