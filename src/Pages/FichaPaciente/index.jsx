@@ -76,7 +76,7 @@ export default function FichaPaciente() {
 
             <div className="box2">
               <label htmlFor="">Espécie:</label>
-              <input disabled="false" type="text" value={user.expecie} />
+              <input disabled="false" type="text" value={user.especie} />
             </div>
           </div>
 

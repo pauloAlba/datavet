@@ -29,10 +29,10 @@ export default function Lista() {
               <input type="text" width={"10px"} value={user.id} />
               <input type="text" width={"10px"} value={user.nomePaciente} />
               <input className="visible" type="text" width={"40px"} value={user.raca}/>
-              <input className="visible" type="text" width={"40px"} value={user.expecie}/>
+              <input className="visible" type="text" width={"40px"} value={user.especie}/>
               <input className="visible" type="text" width={"10px"} value={user.castrado}/>
               <input className="visible" type="text" width={"10px"} value={user.clinicoResponsavel}/>
-              <input className="visible" type="text" width={"40px"} value={user.nascimento}/>
+              <input className="visible" type="text" width={"40px"} value={user.dataNascimento}/>
             <Link className="btnAbrir" to={`/ficha/${user.id}`}>Abrir</Link>
             </li>
           </ul>
