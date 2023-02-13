@@ -54,7 +54,7 @@ export default function FormularioCadastro({ status }) {
             mask="000.000.000-00"
             placeholder="Digite o CPF"
             value={cpf}
-            onChange={(e) => setCpf(e.target.value)}
+            onChange={(e) => setCPF(e.target.value)}
           />
       
           <label htmlFor="">Telefone:</label>

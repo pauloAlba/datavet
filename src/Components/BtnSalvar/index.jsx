@@ -2,7 +2,7 @@ import "./btnSalvar.css";
 import { Link } from "react-router-dom";
 
 export default function BtnSalvar({id, url, nomeTutor, cpf, telefone, endereco, indicacao, nomePaciente, especie
-, raca, nascimento, castrado, clinicoResponsavel, telefoneClinico}) {
+, raca, dataNascimento, castrado, clinicoResponsavel, telefoneClinico}) {
 
   function handleSalvar(e){
       e.preventDefault();
@@ -21,7 +21,7 @@ export default function BtnSalvar({id, url, nomeTutor, cpf, telefone, endereco, 
           nomePaciente: nomePaciente,
           especie: especie,
           raca: raca,
-          dataNascimento: nascimento,
+          dataNascimento: dataNascimento,
           castrado: castrado,
           clinicoResponsavel: clinicoResponsavel,
           telefoneClinico: telefoneClinico,
