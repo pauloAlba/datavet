@@ -8,9 +8,9 @@
 
 
   </div border="1">
-  <h2 align="left">Versão para computador</h2>
+  <h2 align="left">Versão para desktop</h2>
 <img alt="License: MIT" src="https://user-images.githubusercontent.com/17308374/218809901-e4e31768-1c7b-4ebf-b529-f3832e99660d.png" />
-  <h2 align="left">Versão para tablet / Smartphone</h2>
+  <h2 align="left">Versão para mobile</h2>
   <img src="https://user-images.githubusercontent.com/17308374/218810153-c389a742-f9ee-4032-b08d-3556f17a3ff7.png">
   </div>
   
