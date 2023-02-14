@@ -3,17 +3,14 @@ import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { IMaskInput } from "react-imask";
 
-
 import Header from "../../Components/Header";
 import BtnFechar from "../../Components/BtnFechar";
 import BtnEditar from "../../Components/BtnEditar";
 import BtnDeletar from "../../Components/BtnDeletar";
 
-
 export default function FichaPaciente() {
   const { id } = useParams();
   const url = "https://datavetbackend.onrender.com";
-  
 
   const [user, setUser] = useState([]);
 
@@ -40,20 +37,15 @@ export default function FichaPaciente() {
           <input disabled="false" type="text" value={user.nomeTutor} />
 
           <label htmlFor="">CPF:</label>
-          <IMaskInput 
-          disabled="false"
-          mask="000.000.000-00"
-          value={user.cpf}
-          />
+          <IMaskInput disabled="false" mask="000.000.000-00" value={user.cpf} />
 
           <label htmlFor="">Telefone:</label>
-          <IMaskInput 
-          disabled="false"
-          mask="(00) 90000-0000"
-          value={user.telefone}
-          placeholder="(00) 00000-0000"
+          <IMaskInput
+            disabled="false"
+            mask="(00) 90000-0000"
+            value={user.telefone}
+            placeholder="(00) 00000-0000"
           />
-          
 
           <label htmlFor="">Endereço:</label>
           <input disabled="false" type="text" value={user.endereco} />

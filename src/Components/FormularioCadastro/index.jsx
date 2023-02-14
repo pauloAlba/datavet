@@ -56,7 +56,7 @@ export default function FormularioCadastro({ status }) {
             value={cpf}
             onChange={(e) => setCPF(e.target.value)}
           />
-      
+
           <label htmlFor="">Telefone:</label>
           <IMaskInput
             mask="(00) 90000-0000"
@@ -89,34 +89,46 @@ export default function FormularioCadastro({ status }) {
             type="text"
           />
 
-          <label htmlFor="">Espécie:</label>
-          <input
-            value={especie}
-            onChange={(e) => setEspecie(e.target.value)}
-            type="text"
-          />
+          <div className="box1">
+            <div className="box2">
+              <label htmlFor="">Raça:</label>
+              <input
+                type="text"
+                value={raca}
+                onChange={(e) => setRaca(e.target.value)}
+              />
+            </div>
 
-          <label htmlFor="">Raça:</label>
-          <input
-            value={raca}
-            onChange={(e) => setRaca(e.target.value)}
-            type="text"
-          />
+            <div className="box2">
+              <label htmlFor="">Espécie:</label>
+              <input
+                type="text"
+                value={especie}
+                onChange={(e) => setEspecie(e.target.value)}
+              />
+            </div>
+          </div>
 
-          <label htmlFor="">Nascimento:</label>
-          <IMaskInput
-            mask="00/00/0000"
-            placeholder="dd/mm/aaaa"
-            value={nascimento}
-            onChange={(e) => setNascimento(e.target.value)}
-          />
+          <div className="box1">
+            <div className="box2">
+              <label htmlFor="">Nascimento:</label>
+              <IMaskInput
+                mask="00/00/0000"
+                placeholder="dd/mm/aaaa"
+                value={nascimento}
+                onChange={(e) => setNascimento(e.target.value)}
+              />
+            </div>
 
-          <label htmlFor="">Castrado:</label>
-          <input
-            value={castrado}
-            onChange={(e) => setCastrado(e.target.value)}
-            type="text"
-          />
+            <div className="box2">
+              <label htmlFor="">Castrado:</label>
+              <input
+                type="text"
+                value={castrado}
+                onChange={(e) => setCastrado(e.target.value)}
+              />
+            </div>
+          </div>
 
           <label htmlFor="">Clinico geral responsável:</label>
           <input
@@ -136,7 +148,7 @@ export default function FormularioCadastro({ status }) {
         </div>
       </form>
 
-      <BtnSalvar 
+      <BtnSalvar
         onClick={handleSubmit}
         url={url}
         nomeTutor={nomeTutor}

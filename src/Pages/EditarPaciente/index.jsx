@@ -148,7 +148,6 @@ export default function EditarPaciente() {
                 value={nascimento}
                 onChange={(e) => setNascimento(e.target.value)}
               />
-    
             </div>
 
             <div className="box2">
@@ -161,8 +160,6 @@ export default function EditarPaciente() {
               />
             </div>
           </div>
-
-          <div className="box2"></div>
 
           <label htmlFor="">Clínico responsável:</label>
           <input
@@ -180,7 +177,6 @@ export default function EditarPaciente() {
             value={telefoneClinico}
             onChange={(e) => setTelefoneClinico(e.target.value)}
           />
-          
         </div>
       </form>
 
