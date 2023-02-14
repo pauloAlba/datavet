@@ -10,8 +10,7 @@
 </p>
   
   <div align="left">
-  Galeria de imagens totalmente responsiva, foi desenvolvida utilizando CSS Flexbox e um pouco de JavaScript(para a troca de imagens). 
-    Todo o design da galeria foi feito utilizando o figma. As imagens foram retiradas do site Pexels. Você pode conferir todos os detalhes abaixo😀. 
+  A aplicação é um CRUD para cadastro de clientes de um clinica veterinária, utilizei muito dos conhecimentos em React que foram adquiridos nas ultimas semanas; Fiz todo o planejamento do aplicativo com base em um problema real, foi utilizado o Figma para criar o design😀. 
 
 
   </div border="1">
